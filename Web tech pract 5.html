@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information System</title>
+
+    <style>
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #333;
+        }
+
+        /* Header - Static Position */
+        header {
+            background-color: #173b70;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            position: static;
+        }
+
+        /* Navigation - Sticky Position */
+        nav {
+            background-color: #24549a;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #f0a500;
+            color: #173b70;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #173b70;
+            text-align: center;
+        }
+
+        /* Relative Position */
+        .profile-box {
+            position: relative;
+            background-color: #dceafe;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        /* Absolute Position */
+        .status {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #198754;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        /* Course Cards */
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .course {
+            background-color: #edf3fa;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 200px;
+        }
+
+        /* Fixed Position */
+        .help-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #f0a500;
+            color: #173b70;
+            padding: 12px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Attendance Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #24549a;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #edf3fa;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #173b70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            main {
+                width: 95%;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            .status {
+                position: static;
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Static Position -->
+    <header>
+        <h1>STUDENT INFORMATION SYSTEM</h1>
+        <p>Your Academic Journey Starts Here</p>
+    </header>
+
+    <!-- Sticky Position -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#attendance">Attendance</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Home -->
+        <section id="home">
+            <h2>Welcome to Student Portal</h2>
+            <p>
+                The Student Information System helps students
+                manage their academic information in one place.
+                Students can view their profile, courses,
+                attendance and examination details.
+            </p>
+        </section>
+
+        <!-- Relative and Absolute Position -->
+        <section id="profile">
+            <h2>Student Profile</h2>
+
+            <div class="profile-box">
+                <span class="status">Active Student</span>
+
+                <h3>Personal Details</h3>
+                <p><b>Name:</b> Student Name</p>
+                <p><b>Student ID:</b> URK26CS9020</p>
+                <p><b>Department:</b> Computer Science</p>
+                <p><b>Semester:</b> First Semester</p>
+            </div>
+        </section>
+
+        <!-- Courses -->
+        <section id="courses">
+            <h2>My Courses</h2>
+
+            <div class="course-container">
+                <div class="course">
+                    <h3>Web Technology</h3>
+                    <p>HTML, CSS and web development.</p>
+                </div>
+
+                <div class="course">
+                    <h3>Digital Electronics</h3>
+                    <p>Digital circuits and logic gates.</p>
+                </div>
+
+                <div class="course">
+                    <h3>Mathematics</h3>
+                    <p>Mathematical concepts and applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attendance -->
+        <section id="attendance">
+            <h2>Attendance Details</h2>
+
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total Classes</th>
+                    <th>Attended</th>
+                    <th>Percentage</th>
+                </tr>
+
+                <tr>
+                    <td>Web Technology</td>
+                    <td>30</td>
+                    <td>27</td>
+                    <td>90%</td>
+                </tr>
+
+                <tr>
+                    <td>Digital Electronics</td>
+                    <td>30</td>
+                    <td>25</td>
+                    <td>83%</td>
+                </tr>
+
+                <tr>
+                    <td>Mathematics</td>
+                    <td>30</td>
+                    <td>28</td>
+                    <td>93%</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Email: student@example.com</p>
+            <p>Student Support: Available during college hours</p>
+        </section>
+
+    </main>
+
+    <!-- Fixed Position -->
+    <a href="#contact" class="help-button">Help</a>
+
+    <footer>
+        <p>&copy; 2026 Student Information System</p>
+        <p>All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
